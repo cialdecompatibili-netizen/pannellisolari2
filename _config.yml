@@ -1,17 +1,17 @@
 related_posts: 3
-title: Pelletteria
+title: Heliora Energia
 baseurl: "/pannellisolari2"
 url: "https://cialdecompatibili-netizen.github.io"
 email: ""
-description: "Pelletteria artigianale: borse, zaini, valigeria, portafogli, cinture, giacche e scarpe in pelle per donna e per uomo."
-footer_text: "&copy; 2026 Pelletteria"
+description: "Impianti a energia rinnovabile su misura: fotovoltaico, batterie di accumulo, pompe di calore e ricarica per auto elettriche, per la casa e per le aziende."
+footer_text: "&copy; 2026 Heliora Energia"
 minimal_mistakes_skin: default
 search: true
 
 # SEO globale
 author:
-  name: "Pelletteria"
-  bio: "Borse, valigeria e accessori in pelle per donna e uomo."
+  name: "Heliora Energia"
+  bio: "Fotovoltaico, accumulo, pompe di calore e ricarica elettrica per casa e aziende."
   links:
     - label: "Scrivici"
       icon: "fas fa-fw fa-envelope"

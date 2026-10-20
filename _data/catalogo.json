@@ -1,141 +1,110 @@
 {
-  "_nota": "PELLETTERIA. Reparti Donna e Uomo; le sottocategorie hanno il campo \"genitore\". Prezzi in centesimi. Fonte UNICA di /negozio/ e delle pagine prodotto. L'id \"categoria\" e' riservato.",
+  "_nota": "HELIORA ENERGIA. Aree Per la casa, Per le aziende, Assistenza; le sottocategorie hanno il campo \"genitore\". Nessun prodotto: si lavora su preventivo. L'id \"categoria\" e' riservato.",
   "categorie": [
     {
-      "id": "donna",
-      "nome": "Donna",
+      "id": "casa",
+      "nome": "Per la casa",
       "icona": ""
     },
     {
-      "id": "donna-borse-mano",
-      "nome": "Borse a mano",
+      "id": "casa-fotovoltaico",
+      "nome": "Fotovoltaico residenziale",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-borse-spalla",
-      "nome": "Borse a spalla",
+      "id": "casa-accumulo",
+      "nome": "Batterie di accumulo",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-tracolle",
-      "nome": "Tracolle e mini bag",
+      "id": "casa-pompe",
+      "nome": "Pompe di calore",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-shopper",
-      "nome": "Shopper e tote",
+      "id": "casa-solare-termico",
+      "nome": "Solare termico",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-pochette",
-      "nome": "Pochette e clutch",
+      "id": "casa-colonnine",
+      "nome": "Colonnine di ricarica",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-zaini",
-      "nome": "Zaini",
+      "id": "casa-condomini",
+      "nome": "Condomini e comunità energetiche",
       "icona": "",
-      "genitore": "donna"
+      "genitore": "casa"
     },
     {
-      "id": "donna-portafogli",
-      "nome": "Portafogli e portacarte",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "donna-viaggio",
-      "nome": "Valigeria e viaggio",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "donna-cinture",
-      "nome": "Cinture",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "donna-giacche",
-      "nome": "Giacche e capispalla",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "donna-scarpe",
-      "nome": "Scarpe e stivali",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "donna-accessori",
-      "nome": "Guanti e accessori",
-      "icona": "",
-      "genitore": "donna"
-    },
-    {
-      "id": "uomo",
-      "nome": "Uomo",
+      "id": "aziende",
+      "nome": "Per le aziende",
       "icona": ""
     },
     {
-      "id": "uomo-24ore",
-      "nome": "Borse 24 ore e porta PC",
+      "id": "az-fotovoltaico",
+      "nome": "Fotovoltaico industriale",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "aziende"
     },
     {
-      "id": "uomo-messenger",
-      "nome": "Messenger e tracolle",
+      "id": "az-agricolo",
+      "nome": "Aziende agricole",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "aziende"
     },
     {
-      "id": "uomo-zaini",
-      "nome": "Zaini",
+      "id": "az-accumulo",
+      "nome": "Accumulo e autoconsumo",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "aziende"
     },
     {
-      "id": "uomo-viaggio",
-      "nome": "Valigeria e borsoni",
+      "id": "az-ricarica",
+      "nome": "Ricarica per flotte e parcheggi",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "aziende"
     },
     {
-      "id": "uomo-portafogli",
-      "nome": "Portafogli e portacarte",
+      "id": "az-diagnosi",
+      "nome": "Diagnosi energetica",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "aziende"
     },
     {
-      "id": "uomo-cinture",
-      "nome": "Cinture e bretelle",
-      "icona": "",
-      "genitore": "uomo"
+      "id": "assistenza",
+      "nome": "Assistenza",
+      "icona": ""
     },
     {
-      "id": "uomo-giacche",
-      "nome": "Giacche e giubbotti",
+      "id": "as-manutenzione",
+      "nome": "Manutenzione impianti",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "assistenza"
     },
     {
-      "id": "uomo-scarpe",
-      "nome": "Scarpe e stivali",
+      "id": "as-monitoraggio",
+      "nome": "Monitoraggio della produzione",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "assistenza"
     },
     {
-      "id": "uomo-accessori",
-      "nome": "Guanti e accessori",
+      "id": "as-pulizia",
+      "nome": "Pulizia dei pannelli",
       "icona": "",
-      "genitore": "uomo"
+      "genitore": "assistenza"
+    },
+    {
+      "id": "as-pratiche",
+      "nome": "Pratiche e incentivi",
+      "icona": "",
+      "genitore": "assistenza"
     }
   ],
   "prodotti": []

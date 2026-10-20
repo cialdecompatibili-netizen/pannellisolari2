@@ -3,6 +3,6 @@
     "id": "main",
     "nome": "Contenuto",
     "enabled": true,
-    "html": "<p>Pelletteria propone borse, zaini, valigeria, portafogli, cinture, giacche e scarpe in pelle, divisi in due reparti: Donna e Uomo.</p><h2>Reparti</h2><ul><li><a href=\"__BASEURL__/negozio/categoria/donna/\">Donna</a></li><li><a href=\"__BASEURL__/negozio/categoria/uomo/\">Uomo</a></li></ul><p>Scegli un reparto dal negozio o scrivici dalla pagina Contatti.</p>"
+    "html": "<p>Heliora Energia realizza impianti a energia rinnovabile: fotovoltaico, batterie di accumulo, pompe di calore e ricarica per auto elettriche, divisi in tre aree: Per la casa, Per le aziende, Assistenza.</p><h2>Aree</h2><ul><li><a href=\"__BASEURL__/negozio/categoria/casa/\">Per la casa</a></li><li><a href=\"__BASEURL__/negozio/categoria/aziende/\">Per le aziende</a></li><li><a href=\"__BASEURL__/negozio/categoria/assistenza/\">Assistenza</a></li></ul><p>Scegli un'area dal sito o scrivici dalla pagina Contatti per un preventivo.</p>"
   }
 ]

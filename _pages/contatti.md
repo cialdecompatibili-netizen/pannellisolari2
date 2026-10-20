@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Contatti"
-seo_title: "Contatti | Pelletteria"
+seo_title: "Contatti | Heliora Energia"
 seo_description: "Scrivici cosa ti serve o quale prodotto cerchi: ti rispondiamo entro 24 ore, festivi esclusi."
 permalink: /contatti/
 ---

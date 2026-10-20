@@ -1,11 +1,11 @@
 main:
   - title: "Home"
     url: /
-  - title: "Donna"
-    url: /negozio/categoria/donna/
-  - title: "Uomo"
-    url: /negozio/categoria/uomo/
-  - title: "Blog"
-    url: /blog/
+  - title: "Per la casa"
+    url: /negozio/categoria/casa/
+  - title: "Per le aziende"
+    url: /negozio/categoria/aziende/
+  - title: "Assistenza"
+    url: /negozio/categoria/assistenza/
   - title: "Contatti"
     url: /contatti/
