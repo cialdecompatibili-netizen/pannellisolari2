@@ -1,0 +1,142 @@
+{
+  "_nota": "PELLETTERIA. Reparti Donna e Uomo; le sottocategorie hanno il campo \"genitore\". Prezzi in centesimi. Fonte UNICA di /negozio/ e delle pagine prodotto. L'id \"categoria\" e' riservato.",
+  "categorie": [
+    {
+      "id": "donna",
+      "nome": "Donna",
+      "icona": ""
+    },
+    {
+      "id": "donna-borse-mano",
+      "nome": "Borse a mano",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-borse-spalla",
+      "nome": "Borse a spalla",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-tracolle",
+      "nome": "Tracolle e mini bag",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-shopper",
+      "nome": "Shopper e tote",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-pochette",
+      "nome": "Pochette e clutch",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-zaini",
+      "nome": "Zaini",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-portafogli",
+      "nome": "Portafogli e portacarte",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-viaggio",
+      "nome": "Valigeria e viaggio",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-cinture",
+      "nome": "Cinture",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-giacche",
+      "nome": "Giacche e capispalla",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-scarpe",
+      "nome": "Scarpe e stivali",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "donna-accessori",
+      "nome": "Guanti e accessori",
+      "icona": "",
+      "genitore": "donna"
+    },
+    {
+      "id": "uomo",
+      "nome": "Uomo",
+      "icona": ""
+    },
+    {
+      "id": "uomo-24ore",
+      "nome": "Borse 24 ore e porta PC",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-messenger",
+      "nome": "Messenger e tracolle",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-zaini",
+      "nome": "Zaini",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-viaggio",
+      "nome": "Valigeria e borsoni",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-portafogli",
+      "nome": "Portafogli e portacarte",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-cinture",
+      "nome": "Cinture e bretelle",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-giacche",
+      "nome": "Giacche e giubbotti",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-scarpe",
+      "nome": "Scarpe e stivali",
+      "icona": "",
+      "genitore": "uomo"
+    },
+    {
+      "id": "uomo-accessori",
+      "nome": "Guanti e accessori",
+      "icona": "",
+      "genitore": "uomo"
+    }
+  ],
+  "prodotti": []
+}

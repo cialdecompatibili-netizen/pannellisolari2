@@ -1,0 +1,8 @@
+[
+  {
+    "id": "main",
+    "nome": "Contenuto",
+    "enabled": true,
+    "html": "<p>Pelletteria propone borse, zaini, valigeria, portafogli, cinture, giacche e scarpe in pelle, divisi in due reparti: Donna e Uomo.</p><h2>Reparti</h2><ul><li><a href=\"__BASEURL__/negozio/categoria/donna/\">Donna</a></li><li><a href=\"__BASEURL__/negozio/categoria/uomo/\">Uomo</a></li></ul><p>Scegli un reparto dal negozio o scrivici dalla pagina Contatti.</p>"
+  }
+]

@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Donna"
+    url: /negozio/categoria/donna/
+  - title: "Uomo"
+    url: /negozio/categoria/uomo/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contatti"
+    url: /contatti/

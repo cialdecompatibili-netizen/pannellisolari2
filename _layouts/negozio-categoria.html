@@ -1,0 +1,56 @@
+---
+layout: single
+classes: wide
+author_profile: false
+---
+{%- comment -%}
+PAGINA CATEGORIA DEL NEGOZIO. Il file _negozio/categoria-<id>.md ha solo front matter (layout, title, cid, permalink); i prodotti vengono da _data/catalogo.json.
+Due livelli: reparto (Donna/Uomo, senza "genitore") e sottocategoria (campo "genitore" = id del reparto). Il reparto mostra le sue sottocategorie e i prodotti di tutte.
+{%- endcomment -%}
+{%- assign nz_k = site.data.catalogo.categorie | where: 'id', page.cid | first -%}
+{%- if site.ecommerce != true or nz_k == nil -%}
+<p>Questa categoria non &egrave; disponibile. <a href="{{ '/negozio/' | relative_url }}">Torna al negozio</a></p>
+{%- else -%}
+{%- assign nz_figli = site.data.catalogo.categorie | where: 'genitore', nz_k.id -%}
+{%- if nz_k.genitore -%}{%- assign nz_pad = site.data.catalogo.categorie | where: 'id', nz_k.genitore | first -%}{%- endif -%}
+{%- assign nz_ids = nz_k.id -%}
+{%- for f in nz_figli -%}{%- assign nz_ids = nz_ids | append: ',' | append: f.id -%}{%- endfor -%}
+{%- assign nz_ids_a = nz_ids | split: ',' -%}
+<div id="negozio" data-tracker="{{ site.ordini.tracker }}" data-worker="">
+<nav class="nz-brd" aria-label="Percorso"><a href="{{ '/negozio/' | relative_url }}">Negozio</a>{% if nz_pad %} &rsaquo; <a href="{{ '/negozio/categoria/' | append: nz_pad.id | append: '/' | relative_url }}">{{ nz_pad.nome }}</a>{% endif %} &rsaquo; <span>{{ nz_k.nome }}</span></nav>
+<div class="nz-pills"><a class="nz-cpill" href="{{ '/negozio/' | relative_url }}">Tutti</a>
+{%- for c in site.data.catalogo.categorie -%}
+{%- unless c.genitore -%}
+<a class="nz-cpill{% if c.id == nz_k.id or c.id == nz_k.genitore %} on{% endif %}" href="{{ '/negozio/categoria/' | append: c.id | append: '/' | relative_url }}">{{ c.icona }} {{ c.nome }}</a>
+{%- endunless -%}
+{%- endfor %}
+</div>
+{%- if nz_figli.size > 0 %}
+<div class="nz-pills nz-sub">
+{%- for c in nz_figli %}
+<a class="nz-cpill" href="{{ '/negozio/categoria/' | append: c.id | append: '/' | relative_url }}">{{ c.icona }} {{ c.nome }}</a>
+{%- endfor %}
+</div>
+{%- elsif nz_pad %}
+{%- assign nz_fr = site.data.catalogo.categorie | where: 'genitore', nz_pad.id %}
+<div class="nz-pills nz-sub">
+{%- for c in nz_fr %}
+<a class="nz-cpill{% if c.id == nz_k.id %} on{% endif %}" href="{{ '/negozio/categoria/' | append: c.id | append: '/' | relative_url }}">{{ c.icona }} {{ c.nome }}</a>
+{%- endfor %}
+</div>
+{%- endif %}
+{%- assign nz_lista = site.data.catalogo.prodotti | where_exp: 'x', 'nz_ids_a contains x.categoria' | where_exp: 'x', 'x.visibile != false' -%}
+{%- if nz_lista.size == 0 -%}
+<p class="nz-cnt nz-vuota">Gli articoli di questa categoria arrivano presto. Intanto <a href="{{ '/contatti/' | relative_url }}">scrivici</a> cosa cerchi.</p>
+{%- else -%}
+<p class="nz-cnt">{{ nz_lista.size }} {% if nz_lista.size == 1 %}prodotto{% else %}prodotti{% endif %}</p>
+{%- endif -%}
+<div class="nz-lista">
+{%- for b in nz_lista -%}
+{%- assign nz_cb = site.data.catalogo.categorie | where: 'id', b.categoria | first -%}
+{% include negozio-riga.html b=b cat=nz_cb %}
+{%- endfor -%}
+</div>
+<p class="nz-vai"><a class="btn btn-outline-secondary" href="{{ '/carrello/' | relative_url }}">Vai al carrello</a></p>
+</div>
+{%- endif -%}
