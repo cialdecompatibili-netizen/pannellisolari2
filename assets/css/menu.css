@@ -97,3 +97,18 @@ a.nv__dd-item, a.nv__dd-item:visited, a.nv__dd-item:focus { color: var(--t-nav-t
 a.nv__dd-item:hover, a.nv__dd-item:focus-visible { color: var(--t-accent, #8a6a3a); background: #f6f1e8; box-shadow: inset 3px 0 0 #b08d57; }
 a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover { background: #b08d57; color: #14110f; box-shadow: none; }
 @media (max-width: 767.98px) { .nv__link, .nv__item.active > .nv__link { box-shadow: none; } .nv__item.active > .nv__link { border-left: 3px solid #b08d57; padding-left: .6rem; } }
+
+/* =====================================================================
+   MENU SEMPRE SU UNA RIGA (desktop, da 768px in su)
+   PERCHE': con marchio + voci + lente/carrello il menu andava a capo sulla riga sotto nelle
+   larghezze intermedie. Ora niente a capo: marchio, voci e padding si restringono con clamp()
+   quanto serve. Sotto i 768px resta l'hamburger (invariato).
+   ===================================================================== */
+@media (min-width: 768px) {
+  .nv__inner { flex-wrap: nowrap; gap: .5rem; }
+  .nv__brand { flex: 0 0 auto; white-space: nowrap; font-size: clamp(1rem, 1.9vw, 1.15rem); }
+  .nv__panel { flex: 1 1 auto; min-width: 0; }
+  .nv__list { flex-wrap: nowrap; gap: 0; }
+  .nv__link { white-space: nowrap; padding: .5rem clamp(.35rem, .9vw, .75rem); font-size: clamp(.8rem, 1.35vw, .95rem); }
+  .nv__tools { flex: 0 0 auto; padding-left: 0; }
+}
