@@ -106,6 +106,34 @@
       if (e.key === 'Escape') { closePanel(); closeDropdowns(); }
     });
 
+    // ---- ADATTAMENTO AUTOMATICO (desktop, da 768px) ----
+    // Se le voci non ci stanno accanto al marchio, invece di sovrapporsi tutto si rimpicciolisce:
+    // si prova con fattori 1, 0.97, 0.94 ... fino a 0.55 e si tiene il primo che non si sovrappone.
+    // Il fattore e' la variabile CSS --nv-s sull'header (la usa menu.css).
+    function fitMenu() {
+      var header = document.querySelector('.nv-header');
+      var brand = header && header.querySelector('.nv__brand');
+      var list = header && header.querySelector('.nv__list');
+      if (!header || !brand || !list) return;
+      if (window.innerWidth < 768) { header.style.removeProperty('--nv-s'); return; }   // 768 = stesso valore di menu.css
+      var s = 1;
+      header.style.setProperty('--nv-s', s);
+      function sovrapposto() {
+        return list.getBoundingClientRect().left < brand.getBoundingClientRect().right + 8 ||
+               list.scrollWidth > list.parentNode.clientWidth + 1;
+      }
+      while (sovrapposto() && s > 0.55) {
+        s = Math.round((s - 0.03) * 100) / 100;
+        header.style.setProperty('--nv-s', s);
+      }
+    }
+    var fitTimer = null;
+    function fitSoon() { if (fitTimer) cancelAnimationFrame(fitTimer); fitTimer = requestAnimationFrame(fitMenu); }
+    fitMenu();
+    window.addEventListener('resize', fitSoon);
+    window.addEventListener('load', fitMenu);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMenu);   // i font web cambiano le larghezze
+
     // se si allarga la finestra con il pannello aperto, torna tutto pulito
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 768) closePanel();   // 768 = stesso valore di menu.css

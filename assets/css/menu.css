@@ -101,14 +101,16 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
 /* =====================================================================
    MENU SEMPRE SU UNA RIGA (desktop, da 768px in su)
    PERCHE': con marchio + voci + lente/carrello il menu andava a capo sulla riga sotto nelle
-   larghezze intermedie. Ora niente a capo: marchio, voci e padding si restringono con clamp()
-   quanto serve. Sotto i 768px resta l'hamburger (invariato).
+   larghezze intermedie. Ora niente a capo e niente sovrapposizioni: menu.js (funzione fitMenu)
+   misura se le voci toccano il marchio e abbassa --nv-s (1 = misure normali, minimo 0.55);
+   marchio, voci e spazi usano quel fattore. Se nemmeno al minimo ci sta, il marchio si accorcia con "...".
+   Sotto i 768px resta l'hamburger (invariato).
    ===================================================================== */
 @media (min-width: 768px) {
-  .nv__inner { flex-wrap: nowrap; gap: .5rem; }
-  .nv__brand { flex: 0 0 auto; white-space: nowrap; font-size: clamp(1rem, 1.9vw, 1.15rem); }
+  .nv__inner { flex-wrap: nowrap; gap: calc(.5rem * var(--nv-s, 1)); }
+  .nv__brand { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: calc(1.15rem * var(--nv-s, 1)); }
   .nv__panel { flex: 1 1 auto; min-width: 0; }
   .nv__list { flex-wrap: nowrap; gap: 0; }
-  .nv__link { white-space: nowrap; padding: .5rem clamp(.35rem, .9vw, .75rem); font-size: clamp(.8rem, 1.35vw, .95rem); }
+  .nv__link { white-space: nowrap; padding: .5rem calc(.75rem * var(--nv-s, 1)); font-size: calc(.95rem * var(--nv-s, 1)); }
   .nv__tools { flex: 0 0 auto; padding-left: 0; }
 }
